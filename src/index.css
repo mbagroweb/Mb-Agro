@@ -1,0 +1,82 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Spectral:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 36 30% 96%;
+    --foreground: 36 10% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 36 10% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 36 10% 15%;
+
+    --primary: 142 85% 28%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 36 40% 25%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 36 10% 96%;
+    --muted-foreground: 36 5% 45%;
+
+    --accent: 45 100% 50%;
+    --accent-foreground: 36 10% 15%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 36 10% 90%;
+    --input: 36 10% 90%;
+    --ring: 36 40% 45%;
+
+    --radius: 0.5rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+
+  .container-custom {
+    @apply px-4 mx-auto max-w-7xl sm:px-6 lg:px-8;
+  }
+
+  .hero-pattern {
+    background-color: #0A8738;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+
+  .category-card {
+    @apply bg-spice-green text-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300;
+  }
+
+  .product-card {
+    @apply bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300;
+  }
+
+  .btn-primary {
+    @apply bg-spice-yellow hover:bg-spice-orange text-spice-dark-brown font-bold py-2 px-6 rounded-md transition-colors duration-300;
+  }
+  
+  .btn-secondary {
+    @apply bg-spice-green hover:bg-spice-dark-green text-white font-bold py-2 px-6 rounded-md transition-colors duration-300;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-center;
+  }
+
+  .subtitle {
+    @apply text-lg md:text-xl text-center text-muted-foreground mb-12;
+  }
+}
